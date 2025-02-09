@@ -4,6 +4,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
   <title></title>
+  <script>
+  window.location.href = "myntra://openapp?url=https://myntr.it/1en8voP";setTimeout(function() {
+    window.location.href = "https://www.myntra.com"; // Fallback to Myntra website
+  }, 2000);
+ </script>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2113.65">
   <style type="text/css">
@@ -12,28 +17,6 @@
   </style>
 </head>
 <body>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Function to get URL parameters</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function getQueryParam(param) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let params = new URLSearchParams(window.location.search);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>return params.get(param);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Get the Myntra product URL from query parameter</p>
-<p class="p1"><span class="Apple-converted-space">    </span>let myntraProductURL = getQueryParam("url");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// If no product URL is provided, redirect to Myntra homepage</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if (!myntraProductURL) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>myntraProductURL = "https://www.myntra.com";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Attempt to open in Myntra app</p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.location.href = "myntra://openapp?url=" + myntraProductURL;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Fallback to browser after 2 seconds if app doesn't open</p>
-<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(function () {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>window.location.href = myntraProductURL;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, 2000);</p>
-<p class="p1">&lt;/script&gt;</p>
+
 </body>
 </html>
