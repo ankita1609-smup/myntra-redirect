@@ -5,10 +5,29 @@
   <meta http-equiv="Content-Style-Type" content="text/css">
   <title></title>
   <script>
-  window.location.href = "myntra://openapp?url=https://myntr.it/1en8voP";setTimeout(function() {
-    window.location.href = "https://www.myntra.com"; // Fallback to Myntra website
-  }, 2000);
- </script>
+    // Function to get URL parameters
+    function getQueryParam(param) {
+        let params = new URLSearchParams(window.location.search);
+        return params.get(param);
+    }
+
+    // Get the Myntra product URL from query parameter
+    let myntraProductURL = getQueryParam("url");
+
+    // If no product URL is provided, redirect to Myntra homepage
+    if (!myntraProductURL) {
+        myntraProductURL = "https://www.myntra.com";
+    }
+
+    // Attempt to open in Myntra app
+    window.location.href = "myntra://openapp?url=" + myntraProductURL;
+
+    // Fallback to browser after 2 seconds if app doesn't open
+    setTimeout(function () {
+        window.location.href = myntraProductURL;
+    }, 2000);
+</script>
+
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2113.65">
   <style type="text/css">
